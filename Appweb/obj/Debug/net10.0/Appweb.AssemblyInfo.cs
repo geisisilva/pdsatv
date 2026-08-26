@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Appweb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56dde89652b186394aaf90406a19bc5c442d97b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Appweb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Appweb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "52IVJsNcFfU=",
+  "dgSpecHash": "dUUxDBh3XM4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\2024102020004\\Desktop\\Pds 1708\\Appweb\\Appweb.csproj",
+  "projectFilePath": "C:\\Users\\2024102020004\\Documents\\GitHub\\pdsatv\\Appweb\\Appweb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\2024102020004\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\2024102020004\\.nuget\\packages\\google.protobuf\\3.35.0\\google.protobuf.3.35.0.nupkg.sha512",
