@@ -1,0 +1,79 @@
+﻿@page "/processos/cadastro"
+@rendermode InteractiveServer
+
+@inject ProcessoDAO dao
+@inject NavigationManager NavigationManager
+
+<PageTitle>Novo Processo - Sistema de Controle de Processos</PageTitle>
+
+<h2 class="fw-bold mb-4">Cadastro de Processo</h2>
+
+<EditForm Model="@processo" OnValidSubmit="Salvar">
+    <DataAnnotationsValidator />
+
+    <div class="mb-3">
+        <label class="form-label">Número</label>
+        <InputText @bind-Value="processo.Numero" class="form-control" />
+        <ValidationMessage For="@(() => processo.Numero)" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Data</label>
+        <InputDate @bind-Value="processo.Data" class="form-control" />
+        <ValidationMessage For="@(() => processo.Data)" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Situação</label>
+        <InputSelect @bind-Value="processo.Situacao" class="form-select">
+            <option value="Aberto">Aberto</option>
+            <option value="Em análise">Em análise</option>
+            <option value="Pendente">Pendente</option>
+            <option value="Concluído">Concluído</option>
+            <option value="Arquivado">Arquivado</option>
+        </InputSelect>
+
+        <ValidationMessage For="@(() => processo.Situacao)" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Interessado</label>
+        <InputText @bind-Value="processo.Interessado" class="form-control" />
+        <ValidationMessage For="@(() => processo.Interessado)" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Assunto</label>
+        <InputText @bind-Value="processo.Assunto" class="form-control" />
+        <ValidationMessage For="@(() => processo.Assunto)" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Descrição</label>
+        <InputTextArea @bind-Value="processo.Descricao" class="form-control" rows="5" />
+        <ValidationMessage For="@(() => processo.Descricao)" />
+    </div>
+
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-primary">
+            Salvar
+        </button>
+
+        <a href="/processos" class="btn btn-secondary">
+            Cancelar
+        </a>
+    </div>
+</EditForm>
+
+@code
+{
+    private Processo processo = new();
+
+    private void Salvar()
+    {
+        dao.Inserir(processo);
+
+        // Retorna a página de processos após salvar
+        NavigationManager.NavigateTo("/processos");
+    }
+}
