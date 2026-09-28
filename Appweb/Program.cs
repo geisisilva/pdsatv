@@ -1,5 +1,6 @@
-using Appweb;
-using Appweb.Components;
+using AppWebExemplo.Components;
+using AppWebExemplo.Configs;
+using AppWebExemplo.DAO;
 
 var builder = WebApplication.CreateBuilder(args);
 
